@@ -1,0 +1,12 @@
+Inheritance 
+===========
+
+Inheritance
+Inheritance is the process by which objects of one class acquired
+the properties of another classes.
+Five types of Inheritance are
+Single Inheritance
+✓ Multiple Inheritance
+✓ Multilevel Inheritance
+Hierarchical Inheritance
+✓ Hybrid Inheritance
