@@ -1,0 +1,28 @@
+C++
+
+#include<iostream>
+using namespace std;
+
+main()
+{
+cout<<"Hello world";
+}
+
+
+cout -> object
+<<->insertion operator
+
+namespace 
+--------
+if we write a ,multiple line of codes the part of of code is splitted and named it, thats  called namespace 
+
+same namespace group content we can access without proiding the name , bit if we want to access from outside group we need to 
+mention the name  
+
+namespace std ; has a definition about "cout" that why we writting namespace here , and cout is called as object and it's from
+namespace std class
+
+
+
+scope resolution operator
+=========================
