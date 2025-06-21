@@ -70,8 +70,9 @@ using namespace std;
 int main()
 {
     string str;
-    cout<<"Enter string"<<endl; // endl will create new line
-    getline(cin,str); // if user eneter string with space it will consider until the space
+    cout<<"Enter string"<<endl;
+    // until user hits enter all those inputs are considered as string here
+    getline(cin,str); 
     cout<<"string is :  "<<str;
     return 0;
 }

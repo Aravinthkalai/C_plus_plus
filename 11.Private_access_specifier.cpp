@@ -1,7 +1,7 @@
 /*Example 2*/
 /*Private access specificier
 The variables and functions defined inside the 
-private are only accessibly byb within the class members
+private are only accessibly by within the class members
 it is restricted to access from outside of class*/
 #include<iostream>
 using namespace std; 

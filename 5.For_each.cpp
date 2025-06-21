@@ -1,13 +1,12 @@
-/*Example 2*/
+/*Example 1*/
 #include<iostream>
 using namespace std; 
 int main()
 {
     int a[]={65,65,89,85,89,52,952};
-    /*for each we have to declar  a variable
-    inside the for loop with the same type of array
-    and have to seperate the array using "":" operator 
-    so it will automatically featch all the array values*/
+    /*The 'for each' concept is that we have to declare a variable inside the for loop with 
+    the same type as the array and separate the array using the : operator, so it will 
+    automatically fetch all the array values.*/
     for(int x: a) 
     {
         cout<<x<<",";
@@ -20,7 +19,7 @@ int main()
     }
     cout<<endl;
     /*if we use auto then during run time it will automatically fetch the
-    data type and prints the value */
+    data type an prints the value */
     cout<<"auto type : ";
     for(auto x: a) 
     {

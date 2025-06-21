@@ -1,8 +1,7 @@
 /*Example 2*/
 /*Scope resolution operator
-Scope resolution operatot is used to access the identifiers
-such as variable names and function names defined inside some 
-other scope in the current scope.*/
+The scope resolution operator is used to access identifiers, 
+such as variable names and function names, defined in another scope from the current scope.*/
 #include<iostream>
 using namespace std; 
 class student 
@@ -14,6 +13,7 @@ private:
 public:
 // function declaration is mandatory
     void display();
+    int public_Test_variable;
     void get_data()
     {
         cout<<"Enter name : "<<endl;
@@ -35,6 +35,9 @@ void student::display()
     cout<<"M3   : "<<m3<<endl;
     cout<<"Total : "<<tot<<endl;
     cout<<"Average : "<<avg<<endl;
+    cout<<"Before updating the public test variable using :: operator: "<<student::public_Test_variable<<endl;
+    student::public_Test_variable = 20;
+    cout<<"After updating the public test variable using :: operator: "<<student::public_Test_variable<<endl;
 
 }
 int main()
@@ -48,14 +51,16 @@ int main()
 Output:
 Enter name : 
 Aravinth
-Enter 3 marks : 
+Enter 3 marks :
+70
 80
-90
-85
+75
 Name : Aravinth
-M1   : 80
-M2   : 90
-M3   : 85
-Total : 255
-Average : 85
+M1   : 70
+M2   : 80
+M3   : 75
+Total : 225
+Average : 75
+Before updating the public test variable using :: operator: 0
+After updating the public test variable using :: operator: 20
 */

@@ -31,8 +31,10 @@ class math
 };
 int main()
 {
+    // math o(10,20);
+    // math o1(o);
     math o(10,20);
-    math o1(o);
+    math o1 = o;
     o.add();
     o1.add();
 }

@@ -1,7 +1,7 @@
 /*Example 2*/
 /*Public access specificier
 The variables and functions defined inside the 
-public are directly accessibly from anware from the program
+public are directly accessibly from anyware from the program
 without any restrictions*/
 #include<iostream>
 using namespace std; 

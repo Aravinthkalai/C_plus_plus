@@ -1,4 +1,7 @@
-/*Example 2*/
+/*Example 1: Function overloading
+Function overloading means we can use the same function name for multiple operations,
+and the compiler will differentiate function calls by using their parameters
+*/
 #include<iostream>
 using namespace std; 
 int sum(int a, int b, int c)
@@ -17,8 +20,6 @@ int main()
 {
     cout<<"Sum fun with two parameter : "<<sum(10,20)<<endl;
     cout<<"Sum fun with three parameter : "<<sum(10,20,30)<<endl;
-    /*Function overloading means we can use same function name for multiple
-    oepration compiler will differentiate function calls by using its parameters*/
     cout<<"Sum fun with two parameter and float : "<<sum(10.25f,20.50f)<<endl;
     return 0;
 }

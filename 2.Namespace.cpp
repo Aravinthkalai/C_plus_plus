@@ -1,4 +1,8 @@
-// /*Example 1*/
+// /*Example 1
+// Accessing specific things on std libirary using :: operator
+// std contains many functions, classes, etc. If our usage is very low,
+//  we can access specific things using the :: operator.
+//*/
 // #include<iostream>
 // using std::cout;
 // using std::cin; 
@@ -12,10 +16,11 @@
 //     return 0;
 // }
 
-// /*Example 2*/
-// /*If we don't want to chnange the string name
-// we can proceed with two name spaces mentioned below and
-// we can access each of strings using :: operator*/
+// /*Example 2
+//  To use the same variable name with different values using namespace example
+//*/
+// Namespaces : Allow grouping of code (variables, functions, classes) under a name to avoid conflicts.
+// :: operator: Used to access members of a namespace (or a class, or struct, etc.).
 // #include<iostream>
 // using namespace std;
 // namespace name1{
@@ -27,6 +32,11 @@
 // }
 // int main()
 // {
+// /*
+//     Notice that both name1 and name2 have a variable named name, but since they are in separate 
+//     namespaces, there is no conflict. These are treated as different variables because they 
+//     belong to different namespaces.
+// */
 //     cout<<name1::name<<endl;
 //     cout<<name2::name<<endl;
 //     cout<<name1::age<<endl;
@@ -39,7 +49,8 @@
 // 20
 // */
 
-/*Example 3*/
+/*Example 3
+Specifically mentioning the namespace allows direct access instead of using the :: operator.*/
 #include<iostream>
 using namespace std;
 namespace name1{
@@ -49,9 +60,14 @@ namespace name1{
 namespace name2{
     string name = "ram2";
 }
-/*if we decalred like below then we can directly
-access the name variable without scope resolution operator */
+
 using namespace name1;
+
+/*The using namespace directive allows 
+us to directly access all members (variables, functions, etc.) of name1 
+without using the name1:: prefix.
+In this case, we can access name from name1 directly, without needing to write name1::name
+ */
 int main()
 {
     cout<<name<<endl;

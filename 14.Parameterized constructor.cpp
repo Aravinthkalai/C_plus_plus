@@ -1,10 +1,9 @@
 /*Example 1*/
 /* Parameterized Constructor
-Working is same as default constructor but while creating object 
-if we pass some paramteres then it is called parameterized constructor
-default constructor will initialize with whatever value is feed inside 
-the constructor function but paramterized constructor it is possible to 
-upadte the variables by passing paramters
+Working is the same as a default constructor, but when creating an object, if we pass some parameters, 
+it is called a parameterized constructor.A default constructor initializes the object with default values 
+provided inside the constructor function, whereas a parameterized constructor allows updating the variables 
+by passing parameters.
 */
 #include<iostream>
 using namespace std; 

@@ -1,12 +1,10 @@
 /*
 Operator overloading
 In C++, when you overload an operator as a member function, the object on the left side 
-of the operator (c1) is the calling object (this) means, and the object on the right side (c2) is passed 
-as a parameter to the function.
+of the operator (c1) is the calling object (this) (means if we use this-> or
+whithout this-> also we will always get c1 contents) and the object on the right side (c2) is always a 
+parameter to the function.
 
-When you call c1 + c2, the operator + function is called on the c1 object. Inside the operator + function, 
-the real and img refer to the real and img members of the c1 object. This is because the function implicitly 
-uses the this pointer, which points to the object that called the function (c1 in this case).
 */
  
 #include<iostream>
@@ -29,6 +27,7 @@ class complex {
     //Overload the + operator 
     complex operator +(complex c) { 
         complex temp; 
+        cout<<"real "<< real<< " imag "<< img<<endl;
         temp.real = real + c.real; 
         temp.img = img + c.img; 
         return temp;  
