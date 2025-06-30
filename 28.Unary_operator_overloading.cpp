@@ -96,5 +96,9 @@ int main() {
 }
 /*Output
 X :0
+Executed pre increment
+X :1
+Executed post increment
+X :2
 X :20
 */

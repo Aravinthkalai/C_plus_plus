@@ -1,5 +1,5 @@
 /*Example 1*/
-/* Destrctor it is an instance member function which is called 
+/* Destrctor is an instance member function which is called 
 automatically whenever the object is going to destory 
 this is final function call executed at end of the program 
 to cleanup the memory

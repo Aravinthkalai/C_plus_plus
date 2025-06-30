@@ -1,7 +1,9 @@
 /*Example 1*/
 /* copy Constructor
-instead of passing variable as paramerter if we pass a object as paramter then
-it is called copy constructor 
+Instead of passing individual variables as parameters, we can pass 
+an object as a parameter. In such cases, the copy constructor is 
+invoked to create a copy of the object.
+syntax: ClassName obj2 = obj1;
 */
 #include<iostream>
 using namespace std; 
@@ -31,9 +33,12 @@ class math
 };
 int main()
 {
-    // math o(10,20);
-    // math o1(o);
     math o(10,20);
+    /*A copy constructor is called whenever an object of the class is initialized
+    using another object of the same class.
+    Additionally, the copy constructor must be defined inside the class under the 
+    public access specifier.
+    */
     math o1 = o;
     o.add();
     o1.add();

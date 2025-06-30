@@ -1,8 +1,7 @@
 /*Example 1*/
 /* constructor overloading
-It is same as function overloading based on the 
-available paramter and data type it will be called while 
-performing object creations\
+It is similar to function overloading; based on the available parameters 
+and their data types, the appropriate constructor is called during object creation.
 */
 #include<iostream>
 using namespace std; 
