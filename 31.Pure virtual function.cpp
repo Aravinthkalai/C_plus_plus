@@ -1,10 +1,4 @@
 /*Virtual function */
-#include<iostream>
-using namespace std; 
- 
-class base 
-{
-    public:
     /*
         if function prototype is assigned with 0 then it is called
     pure virtual function meaning that user must define this function
@@ -13,6 +7,12 @@ class base
         if class contains alleast one virtual function then it is called
         abstrct class
     */
+#include<iostream>
+using namespace std; 
+ 
+class base 
+{
+    public:
         virtual void show() = 0;
 };
 class derived1:public base // derived1 class
@@ -33,7 +33,7 @@ class derived2:public base // derived2 class
         }
 
 };
-//Driver code 
+
 int main() 
 { 
 

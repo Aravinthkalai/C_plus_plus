@@ -1,7 +1,13 @@
-// /*
-// Single Value Member Initializer list in c++
-// It will initalize member variables instead of assigining it
-// */
+ /*
+// Member Initializer list in c++
+// The Member Initializer List in C++ is a way to initialize class members 
+//(especially constants, references, or base classes) before the constructor body executes.
+Required for:
+    * Const members
+    * Reference members
+    * Members of a class with no default constructor
+    * Base class initialization
+ */
 // #include<iostream>
 // using namespace std;
 
@@ -10,6 +16,7 @@
 //     private:
 //         int x,y;
 //     public:
+// syntax : constructor(value to variable1,value to variable_n):private_variable1_to_initialize(value to variable1),private_variable_n_to_initialize(value to variable_n)
 //         base(int a, int b):x(a),y(b)
 //         {
 //         }
@@ -31,7 +38,7 @@
 // */
 
 // /*
-// Example 2: initializing base class variable 
+// Example 2: initializing the base class private variable 
 // through derived class
 // */
 // #include<iostream>
@@ -57,6 +64,7 @@
 //     private:
 //         int y;
 //     public:
+// //  calling base class constructor and assigning the value
 //         derived(int a, int b):base(a),y(b)
 //         {
 //             cout<<"Y : "<<y<<endl;
@@ -74,7 +82,7 @@
 // */
 
 // /*
-// Example 2: initializing constant using member 
+// Example 2: initializing constant member 
 // initializer
 // */
 // #include<iostream>
@@ -122,7 +130,7 @@
 //         string name;
 //         int x;
 //     public:
-//         /*Some time the belwo mentioned constructor
+//         /*Some time the below mentioned constructor
 //          will give wrong output due to same name*/
 //         // base(string name, int x)
 //         // {
@@ -131,7 +139,11 @@
 //         //     cout<<"name : "<<name<<endl;
 //         //     cout<<"X : "<<x<<endl;
 //         // }
-//         /*To solve this either use this-> or member initializer*/
+//         /*To solve this either use this-> or member initializer is required*/
+            /*Solving it using this->, this-> always access the private or protected
+            member of class 
+            note: this-> will only work inside the class and derived class, in main
+            it is restricted*/
 //         // base(string name, int x)
 //         // {
 //         //     this->name = name;

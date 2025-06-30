@@ -1,16 +1,12 @@
 /*
 Friend class 
-uaing thia concept it is possible to access 
-the private members of friend class  
+A friend class in C++ allows one class to access the private and protected members of another class 
 */
 // #include<iostream>
 // using namespace std;
-// /* class B is declared here so that
-// because c++ will execute from top to down approach
-// since class b is declared after class A it will through error
-// to avoid this it is decalred here 
+// /* class B is a forward declaration to avoid errors while using class B in class A
 // */
-// class B;
+// class B; // forward declaration
 // class A
 // {
 //     private:
@@ -40,37 +36,74 @@ the private members of friend class
 /* Example 2: Accessing private variable using friend class*/
 #include<iostream>
 using namespace std;
+class B; // forward declaration
 
-class B;
-class A
-{
-    private:
-        int x;
-    public:
-        A()
-        {
-            x=0;
-        }
-        void print()
-        {
-            cout<<"X : "<<x<<endl;
-        }
-        friend void setvalue(A &o, int a );
+class A {
+private:
+    int a_private = 1;
+public:
+    friend class B;  // B can access A's private members
 };
 
-void setvalue(A &o, int a )
-{   
-    o.x = a;
+class B {
+private:
+    int b_private = 2;
+public:
+    void accessA(A& a) {
+        cout << a.a_private << "\n";  // Allowed: B is friend of A
+    }
+
+    void accessB(B& b) {
+        cout << b.b_private << "\n";  // Allowed: B can access own private members
+    }
+};
+
+int main() {
+    A a;
+    B b;
+    b.accessA(a);  // OK
+    // a.accessB(b); // ERROR! A cannot access private members of B unless B declares friend A
 }
-int main()
-{
-    A o;
-    o.print();
-    setvalue(o,25);
-    o.print();
-    return 0;
+
+/*Output
+1
+*/
+/* Example 2: Accessing private variable using friend class*/
+#include <iostream>
+using namespace std;
+
+class B;  // forward declaration
+
+class A {
+private:
+    int a_private = 1;
+public:
+    friend class B;  // B is friend of A
+    void accessB(B& b); // declare only
+};
+
+class B {
+private:
+    int b_private = 2;
+public:
+    void accessA(A& a) {
+        cout << a.a_private << "\n";  // B can access A's private members (friend)
+    }
+    friend class A;  // A is friend of B
+};
+
+// Define accessB after B is fully defined
+void A::accessB(B& b) {
+    cout << b.b_private << "\n";  // Now allowed: A is friend of B
+}
+
+int main() {
+    A a;
+    B b;
+    b.accessA(a);  // OK
+    a.accessB(b);  // OK
 }
 /*Output
-X : 0
-X : 25
+1
+2
 */
